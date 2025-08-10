@@ -2,7 +2,7 @@ from appium.options.android import UiAutomator2Options
 from appium.options.ios import XCUITestOptions
 from appium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
-from test_variables import *
+from test_variables import ANDROID_VINSHOP_CONFIG, IOS_VINSHOP_CONFIG
 
 class App_Connect():
     def __init__(self, os):

@@ -12,3 +12,7 @@ IOS_VINSHOP_CONFIG = {
     "bundle_id": "com.vingroup.VinIDMerchantApp",
     "udid": "00008110-000A71540E07A01E"
 }
+
+OS = "android"
+WAIT_SECONDS = 0.85
+FOLDER = "./data/wav-data"
