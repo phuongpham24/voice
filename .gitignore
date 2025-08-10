@@ -1,0 +1,17 @@
+#Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+env/
+venv/
+build/
+dist/
+*.egg-info/
+
+# Bỏ qua file credential
+credentials.json
+*.key
+*.pem
+*.env
