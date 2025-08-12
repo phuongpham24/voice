@@ -1,6 +1,7 @@
 # from pydub import AudioSegment
 import os
 import subprocess
+import requests
 
 class Ultis():
     def __init__(self):
@@ -15,12 +16,14 @@ class Ultis():
         subprocess.run(["ffplay", "-nodisp", "-autoexit", audio], 
             stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
-    def get_file_id(self, file):
+    def get_file_info(self, file):
         self.file_name = os.path.basename(file)
         self.name_without_extention = os.path.splitext(self.file_name)[0]
         self.splited_data = self.name_without_extention.split("_")
-        self.file_id = self.splited_data[1]
-        return self.file_id
+        self.merchant_code = self.splited_data[0]
+        # self.file_id = self.splited_data[1]
+        # return self.file_id
+        return self.name_without_extention, self.merchant_code
 
     def get_column_letter(self, column_index):
         self.result = ""
@@ -29,6 +32,22 @@ class Ultis():
             self.result = chr(ord('A') + self.remainder) + self.result
             self.column_index = (column_index - 1) // 26
         return self.result
+    
+    def voice_to_text_api(self, merchant_code, text):
+        self.params = {
+            "merchantCode": "MCL0GHI45KN66",
+            "recognizedText": text
+        }
+        self.response = requests.post("https://api-litepos-qc.int.vinshop.dev/pcm-int/api/voice-to-order/process", params=self.params)
+        self.response.raise_for_status()
+        self.data = self.response.json()
+        try:
+            self.llm_response = self.data["llmResponse"]
+        except Exception as error:
+            print(f"{error}❌")
+            return
+        else:
+            return self.llm_response
     
     # def convert_aac_wav(self, aac_file_path, wac_output_path):
     #     # aac_file_path = "./voice-data/mot-con-vit.aac"

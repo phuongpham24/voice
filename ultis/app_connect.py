@@ -36,5 +36,8 @@ class App_Connect():
         if self.driver:
             self.driver.quit()
             
-    def terminate_app(self):
-        self.driver.terminate_app("com.vingroup.VinIDMerchantApp")
+    def terminate_app(self, os):
+        if os == "android":
+            self.driver.terminate_app(ANDROID_VINSHOP_CONFIG["app_package"])
+        else:
+            self.driver.terminate_app(IOS_VINSHOP_CONFIG["bundle_id"])

@@ -2,8 +2,8 @@ ANDROID_VINSHOP_CONFIG = {
     "platform_name": "Android",
     "automation_name": "UiAutomator2",
     "device_name": "emulator-5554",
-    "app_package": "com.vingroup.VinIDMerchantApp",
-    "app_activity": "com.vingroup.vinidmerchantapp.MainActivity"
+    "app_package": "com.vingroup.VinIDMerchantApp.QC",
+    "app_activity": "com.example.vinid_merchant_app.MainActivity"
 }
 
 IOS_VINSHOP_CONFIG = {

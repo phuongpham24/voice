@@ -4,9 +4,9 @@ from ultis.ultis import *
 
 FILE_NAME = "voice-to-text"
 SHEET_NAME = "Voice1"
-ANDROID_DETECT_OUTPUT_COL = "C"
-IOS_DETECT_OUTPUT_COL = "D"
-API_RESULT_COL = "E"
+ANDROID_DETECT_OUTPUT_COL = "B"
+IOS_DETECT_OUTPUT_COL = "C"
+API_RESULT_COL = "D"
 ultis = Ultis()
 
 class GGSheet():
