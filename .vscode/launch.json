@@ -1,0 +1,69 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "IOS - VinShop",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "IOS_VINSHOP"
+            ]
+        },
+        {
+            "name": "Android - VinShop",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "ANDROID_VINSHOP"
+            ]
+        },
+        {
+            "name": "IOS - Knote",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "IOS_KNOTE"
+            ]
+        },
+        {
+            "name": "Android - Knote",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "ANDROID_KNOTE"
+            ]
+        },
+        {
+            "name": "IOS - EShop",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "IOS_ESHOP"
+            ]
+        },
+        {
+            "name": "Android - EShop",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "ANDROID_ESHOP"
+            ]
+        }
+    ]
+}
