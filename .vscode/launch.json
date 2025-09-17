@@ -26,7 +26,7 @@
             ]
         },
         {
-            "name": "IOS - Knote",
+            "name": "IOS - Knote (Không tự động test được do không lấy được element",
             "type": "debugpy",
             "request": "launch",
             "program": "${file}",

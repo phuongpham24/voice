@@ -3,10 +3,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 from ultis.ultis import *
 
 FILE_NAME = "voice-to-text"
-SHEET_NAME = "Voice1"
-ANDROID_DETECT_OUTPUT_COL = "B"
-IOS_DETECT_OUTPUT_COL = "C"
-API_RESULT_COL = "D"
+SHEET_NAME = "newVoice"
 ultis = Ultis()
 
 class GGSheet():
@@ -21,15 +18,5 @@ class GGSheet():
         self.cell = self.worksheet.find(id)
         return self.cell.row
     
-    def get_column(self, os):
-        self.col = ""
-        if os == "android":
-            self.col = ANDROID_DETECT_OUTPUT_COL
-        elif os == "ios":
-            self.col = IOS_DETECT_OUTPUT_COL
-        else:
-            self.col = API_RESULT_COL
-        return self.col
-    
     def write_text(self, text, row, col):
-        self.worksheet.update(f"{col}{row}", [[text]])
+        self.worksheet.update(range_name=f"{col}{row}", values=[[text]])

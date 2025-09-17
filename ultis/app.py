@@ -1,8 +1,5 @@
-from appium.options.android import UiAutomator2Options
-from appium.options.ios import XCUITestOptions
 from appium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
-from test_variables import ANDROID_VINSHOP_CONFIG, IOS_VINSHOP_CONFIG
 
 class App():
     def __init__(self, app_config):
@@ -52,7 +49,3 @@ class App():
                 print("[WARN] Missing 'app_package' or 'bundle_id'")
         except Exception as e:
             print(f"[ERROR] Failed to terminate app: {e}")
-        # if os == "android":
-        #     self.driver.terminate_app(ANDROID_VINSHOP_CONFIG["app_package"])
-        # else:
-        #     self.driver.terminate_app(IOS_VINSHOP_CONFIG["bundle_id"])

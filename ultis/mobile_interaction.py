@@ -22,5 +22,5 @@ class MobileUIInteraction():
 
     def get_element_text(self, element):
         self.element = self.wait.until(EC.presence_of_element_located((AppiumBy.XPATH, element)))
-        self.voice_text = self.element.text
+        self.voice_text = self.element.get_attribute("text")
         return self.voice_text
